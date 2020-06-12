@@ -1,0 +1,51 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model MainActivity.ViewModels.ClientViewModel
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="keywords" content="Home Page" />
+    <meta name="description" content="Main Home Page" />
+    <meta name="Developer" content="Denis J Finkel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!--Header-->
+    <header id="index-header-layout">
+        <h1>Welcome Home </h1>
+    </header>
+    <hr />
+    <main>
+        <div>
+            <form asp-action="Index" asp-controller="Home" enctype="multipart/form-data" style="margin:5px">
+                <div asp-validation-summary="All"></div>
+                <!--Email Address Input-->
+                <div style="padding:5px;">
+                    <span asp-validation-for="Client.EmailAddress"></span>
+                    <label asp-for="Client.EmailAddress"></label>
+                    <input asp-for="Client.EmailAddress" />
+                </div>
+                <!--File Upload  Input-->
+                <div style="padding:5px;">
+                    <span asp-validation-for="Client.File"></span>
+                    <label asp-for="Client.File"></label>
+                    <input asp-for="Client.File" />
+                </div>
+                <!--Confirm Form Submission-->
+                <div style="padding:5px;">
+                    <input type="submit" value="Submit Data" />
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <h3>@ViewData["Result"]</h3>
+    </footer>
+
+</body>
+
+</html>
