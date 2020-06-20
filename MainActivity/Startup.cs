@@ -1,5 +1,5 @@
 /*
- * Project: << InReachSolutions Assessment >>
+ * Project: << S3-Document File Uploader >>
  * Software Developer: Denis J Finkel
  * Start Date: June 10 , 2020
  * End Date: June 12 , 2020
